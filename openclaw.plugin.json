@@ -1,0 +1,15 @@
+{
+  "id": "openclaw-null-embeddings",
+  "name": "Null Embeddings",
+  "description": "Local OpenAI-compatible embeddings server returning zero vectors. Enables BM25/FTS memory indexing without a real embedding provider.",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "port": {
+        "type": "number",
+        "default": 11434,
+        "description": "Port for the null embeddings server. Default 11434 (Ollama's default API port); override if Ollama uses it."
+      }
+    }
+  }
+}

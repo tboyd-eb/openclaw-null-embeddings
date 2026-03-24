@@ -1,0 +1,32 @@
+{
+  "name": "openclaw-null-embeddings",
+  "version": "1.0.0",
+  "description": "Local OpenAI-compatible embeddings server returning zero vectors — enables BM25/FTS memory indexing without a real embedding provider.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tboyd-eb/openclaw-null-embeddings.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "index.ts",
+    "server.mjs",
+    "openclaw.plugin.json"
+  ],
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": ">=18.0.0",
+    "typescript": ">=5.0.0"
+  }
+}
